@@ -1,0 +1,106 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: none;
+    font-family: "Segoe UI";
+}
+
+:root {
+    --dark: #3E363F;
+    --darker: #373737;
+    --kaki: #BEB7A4;
+    --purple: #6320EE;
+    --cian: #0081A7;
+}
+
+body {
+    min-width: 360px;
+    background-color: var(--darker);
+}
+
+header {
+    background-color: var(--dark);
+    height: 6rem;
+    width: 100%;
+    box-shadow: 0 0 1rem #00000050;
+    color: white;
+}
+
+main {
+    width: 70%;
+    margin: 0 auto;
+}
+
+#resultado {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+#resultado img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    transition: transform 150ms ease-in-out;
+    border-radius: 1rem;
+}
+
+#resultado img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px var(--cian);
+}
+
+.flx {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buscar {
+    min-width: 14rem;
+    position: fixed;
+    bottom: 2%;
+    left: 25%;
+    width: 50%;
+    margin-inline: auto;
+    border-radius: 2rem;
+    overflow: hidden;
+    box-shadow: 0 0 1rem #00000050;
+}
+
+.buscar>input {
+    height: 3rem;
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.2rem;
+    text-align: center;
+    position: relative;
+}
+
+.buscar>input:focus {
+    outline: none;
+}
+
+.buscar:focus {
+    outline: 2px solid black;
+    border: 2px solid black;
+}
+
+.buscar>button {
+    position: absolute;
+    right: 0;
+    height: 100%;
+    min-width: 3rem;
+    width: 10%;
+    font-size: 1.2rem;
+    background-color: var(--cian);
+    color: white;
+    transition: color 200ms ease-in-out;
+}
+
+.buscar>button:hover {
+    color: var(--darker);
+}
